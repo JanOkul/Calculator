@@ -63,7 +63,6 @@ def display(displayx):
 
     displayx = displayx[startpointer:endpointer]
   
-    print(length, startpointer, endpointer)
     # Destroys whatever expression is displayed on calculator and places new expression
     text.destroy()
     text = tk.Label(text=displayx,font=(25))
