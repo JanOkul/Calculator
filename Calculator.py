@@ -47,11 +47,13 @@ def display(displayx):
     
     length = len(displayx)
    
- 
     caller = inspect.stack()[1][3]  # Checks if the functions calling are the arrow keys
     # If the caller of this function is the arrow functions then disable the pointer assignment
     if caller != "bArrow" and caller != "fArrow":
-        if length >= 15:
+        if caller == "calculate":
+            startpointer = 0
+            endpointer = 15
+        elif length >= 15:
             endpointer = length
             startpointer = length-15
     bval = len(displayx[:startpointer])
