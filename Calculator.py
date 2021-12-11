@@ -28,13 +28,7 @@ forw.place(x=50,y=35)
 # Takes a value or operator and adds it onto the expression
 def totalexpression(num):
     global x
-    if len(x) == 0:
-        x = x + str(num)
-    elif len(x) > 0:
-        if not(x[-1] in ".+-*/" and num in ".+-*/"):
-            x = x + str(num)
-        else:
-            x = x
+    x = x + str(num)
     display(x) 
 
 # Displays any expression onto the calculator screen
